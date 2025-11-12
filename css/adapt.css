@@ -1,0 +1,133 @@
+@media (width <= 768px) and (width > 1px) {
+    .header {
+        height: 85vh;
+    }
+
+    .header__title {
+        font-size: 4.5vw;
+    }
+
+    .header__subtitle {
+        font-size: 2.5vw;
+    }
+
+    .intro{
+        height: 110vw;
+    }
+
+    .intro__container {
+        width: 85%;
+        height: 100vw;
+        transform: translateY(-15%);
+        flex-direction: column;
+    }
+
+    .intro__image {
+        width: 100%;
+    }
+    
+    .intro__image > img {
+        transform: translateY(-15%);
+    }
+
+    .intro__text {
+        padding: 1vw;
+        width: 100%;
+        height: auto;
+        text-align: left;
+        font-size: 3vw;
+    }
+    
+    .preface__container {
+        width: 85%;
+    }
+    
+    .preface__text {
+        font-size: 3vw;
+    }
+
+    .link-cards {
+        margin-top: 5vw;
+        height: 150vw;
+    }
+    
+    .link-cards__container {
+        width: 85%;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 90%;
+        height: 48%;
+        box-shadow: 0vw 1vw 2vw 0vw #3c6af4;
+    }
+
+    .card:hover {
+        box-shadow: 0vw 2vw 2vw 0vw #3c6af4,
+                    0vw 0vw 2vw 0vw #3c6af4,
+                    2vw 2vw 2vw 0vw #3c6af4;
+
+    }
+    
+    .card-bgc {
+        height: 100%;
+    }
+    
+    .card-title {
+        font-size: 4.5vw;
+    }
+    
+    .card-subtitle {
+        font-size: 3vw;
+    }
+    
+    .card-button {
+        width: 70%;
+        height: 6vw;
+    }
+
+    .card-button > a {
+        font-size: 3vw;
+    }
+
+
+
+    .footer {
+        height: 60vw;
+        padding-top: 7vw;
+    }
+    
+    .footer__container {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .footer__content {
+        width: 45%;
+    }
+    
+    .footer__content:nth-child(3) {
+        margin-top: 5vw;
+        width: 90%;
+    }
+    
+    .footer__content > a {
+        font-size: 3vw;
+    }
+    
+    .copyright {
+        margin-top: 5vw;
+        width: 90%;
+        font-size: 2vw;
+    }
+}
+
+@media (width <= 425px) and (width > 1px) {
+    .header__title {
+        font-size: 7vw;
+        margin-bottom: 2vw;
+    }
+    .header__subtitle {
+        font-size: 4vw;
+    }
+}

@@ -93,7 +93,7 @@
 
 
     .footer {
-        height: 60vw;
+        height: 80vw;
         padding-top: 7vw;
     }
     
@@ -122,12 +122,3 @@
     }
 }
 
-@media (width <= 425px) and (width > 1px) {
-    .header__title {
-        font-size: 7vw;
-        margin-bottom: 2vw;
-    }
-    .header__subtitle {
-        font-size: 4vw;
-    }
-}

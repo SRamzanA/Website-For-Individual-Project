@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\ForDesignersAndDevelopers.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adapt.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.js" defer></script>
+    <script src="js/smoothscroll.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
     <title>Для разработчиков</title>
 </head>
 <body>
@@ -25,7 +30,7 @@
             <p class="header-description"><strong>Важно:</strong> Успешный UI/UX требует глубокого понимания целевой аудитории и целей бизнеса. Нет универсального рецепта — есть принципы, которые нужно адаптировать под конкретные задачи.</p>
             <div class="cta-buttons">
                 <a href="#content" class="btn btn-primary">Изучить тренды</a>
-                <a href="#" class="btn btn-secondary">Скачать гайды</a>
+                <a href="#" class="btn btn-secondary" onclick="downloadFullPageScreenshot()">Скачать гайды</a>
             </div>
         </div>
         
@@ -232,50 +237,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Плавная прокрутка для навигационных ссылок
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Добавляем анимацию появления секций при скролле
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Наблюдаем за всеми секциями контента
-        document.querySelectorAll('.content-section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
-        });
-    </script>
-
-    <!-- Футер такой же как на странице разработчиков -->
 </body>
 </html>

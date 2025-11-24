@@ -475,12 +475,18 @@ main {
 /* Адаптивность */
 @media (max-width: 768px) {
     header {
-        padding: 0 10%;
+        padding: 0 4%;
+        padding-top: 3rem;
         min-height: 90vh;
     }
 
+    .scroll-indicator {
+        display: none;
+    }
+
     main {
-        padding: 0 10%;
+        padding: 0 4%;
+        padding-top: 2rem;
     }
 
     .cta-buttons {
@@ -502,7 +508,7 @@ main {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .section-nav {
